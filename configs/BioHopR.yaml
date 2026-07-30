@@ -1,0 +1,11 @@
+name: BioHopR
+
+acquisition:
+    source:
+      URL: "https://huggingface.co/datasets/knowlab-research/BioHopR/resolve/main/BioHopR.json?download=true"
+      target: "datasets/BioHopR/BioHopR.json"
+    
+
+
+
+

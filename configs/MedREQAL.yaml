@@ -1,0 +1,8 @@
+name: MedREQAL
+
+acquisition:
+    source:
+      URL: "https://raw.githubusercontent.com/jvladika/MedREQAL/refs/heads/main/MedREQAL.csv"
+      target: "datasets/MedREQAL/MedREQAL.csv"
+
+

@@ -1,0 +1,12 @@
+name: BioRead
+
+acquisition:
+    source:
+      URL: "https://archive.org/download/bioread_dataset.tar/bioread_dataset.tar.gz"
+      target: "datasets/BioRead/bioread_dataset.tar.gz"
+      format: "tar.gz"
+    
+
+
+
+
