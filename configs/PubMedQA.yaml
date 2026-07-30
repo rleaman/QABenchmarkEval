@@ -1,13 +1,11 @@
 name: PubMedQA
 
 acquisition:
-    source:
-      URL: "https://raw.githubusercontent.com/pubmedqa/pubmedqa/refs/heads/master/data/ori_pqal.json"
-      target: "datasets/PubMedQA/ori_pqal.json"
-    source:
-      URL: "https://drive.google.com/open?id=1RsGLINVce-0GsDkCLDuLZmoLuzfmoCuQ"
-      target: "datasets/PubMedQA/ori_pqau.json"
-    source:
-      URL: "https://drive.google.com/open?id=15v1x6aQDlZymaHGP7cZJZZYFfeJt2NdS"
-      target: "datasets/PubMedQA/ori_pqaa.json"
+    sources:
+      - url: "https://raw.githubusercontent.com/pubmedqa/pubmedqa/refs/heads/master/data/ori_pqal.json"
+        target: "datasets/PubMedQA/ori_pqal.json"
+      - url: "https://drive.google.com/open?id=1RsGLINVce-0GsDkCLDuLZmoLuzfmoCuQ"
+        target: "datasets/PubMedQA/ori_pqau.json"
+      - url: "https://drive.google.com/open?id=15v1x6aQDlZymaHGP7cZJZZYFfeJt2NdS"
+        target: "datasets/PubMedQA/ori_pqaa.json"
 

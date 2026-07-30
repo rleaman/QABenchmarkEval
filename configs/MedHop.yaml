@@ -1,10 +1,10 @@
 name: MedHop
 
 acquisition:
-    source:
-      URL: "https://zenodo.org/records/6407402/files/qangaroo_v1.1.zip?download=1"
-      target: "datasets/MedHop/qangaroo_v1.1.zip"
-      format: "zip"
+    sources:
+      - url: "https://zenodo.org/records/6407402/files/qangaroo_v1.1.zip?download=1"
+        target: "datasets/MedHop/qangaroo_v1.1.zip"
+        format: "zip"
     
 
 

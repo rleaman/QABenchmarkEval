@@ -1,8 +1,8 @@
 name: COVID-QA
 
 acquisition:
-    source:
-      URL: "https://raw.githubusercontent.com/deepset-ai/COVID-QA/refs/heads/master/data/question-answering/COVID-QA.json"
-      target: "datasets/COVID-QA/COVID-QA.json"
+    sources:
+      - url: "https://raw.githubusercontent.com/deepset-ai/COVID-QA/refs/heads/master/data/question-answering/COVID-QA.json"
+        target: "datasets/COVID-QA/COVID-QA.json"
 
 

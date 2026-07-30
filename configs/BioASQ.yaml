@@ -1,0 +1,12 @@
+name: BioASQ
+
+acquisition:
+    sources:
+      - url: "https://participants-area.bioasq.org/Tasks/14b/trainingDataset/"
+        target: "datasets/BioASQ/BioASQ-training14b.zip"
+        format: "zip"
+    
+
+
+
+

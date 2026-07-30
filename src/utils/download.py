@@ -1,6 +1,7 @@
 import logging
 import shutil
 import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 from typing import Optional
@@ -24,7 +25,7 @@ def download_file(
         user_agent: User-Agent header to use.
     """
     dest_path.parent.mkdir(parents=True, exist_ok=True)
-    tmp_path = dest_path.with_suffix(dest_path.suffix + ".tmp")
+    tmp_path = dest_path.with_name(dest_path.name + ".tmp")
 
     last_error: Optional[Exception] = None
     
@@ -35,7 +36,7 @@ def download_file(
     for attempt in range(1, max_retries + 1):
         try:
             logger.debug(f"Downloading {url} (attempt {attempt}/{max_retries})")
-            with opener.open(url) as response, tmp_path.open("wb") as out_file:
+            with opener.open(url, timeout=60) as response, tmp_path.open("wb") as out_file:
                 shutil.copyfileobj(response, out_file)
             
             # Atomic swap

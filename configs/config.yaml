@@ -2,10 +2,11 @@ logging:
   level: INFO
 
 datasets:
+  BioASQ: configs/BioASQ.yaml
   BioHopR: configs/BioHopR.yaml
   BioRead: configs/BioRead.yaml
   COVID-QA: configs/COVID-QA.yaml
   MedHop: configs/MedHop.yaml
-  PubMedQA: configs/PubMedQA.yaml
   MedREQAL: configs/MedREQAL.yaml
+  PubMedQA: configs/PubMedQA.yaml
   
