@@ -23,12 +23,22 @@ python src/main.py update configs/config.yaml
 Convenience launchers are also provided:
 
 ```text
-run.bat
-run.ps1
-./run.sh
+scripts\run.bat
+scripts\run.ps1
+./scripts/run.sh
 ```
 
 Each launcher accepts an optional path to a different top-level configuration file. Existing files and completed extractions are skipped. Downloaded archives are retained beside their extracted contents.
+
+## Run tests
+
+Use the platform-specific test launcher from the repository root:
+
+```text
+scripts\test.bat
+scripts\test.ps1
+./scripts/test.sh
+```
 
 ## Configuration
 
