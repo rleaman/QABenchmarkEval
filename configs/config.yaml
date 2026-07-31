@@ -4,7 +4,6 @@ logging:
 datasets:
   BioASQ: configs/BioASQ.yaml
   BioHopR: configs/BioHopR.yaml
-  BioRead: configs/BioRead.yaml
   COVID-QA: configs/COVID-QA.yaml
   MedHop: configs/MedHop.yaml
   MedREQAL: configs/MedREQAL.yaml

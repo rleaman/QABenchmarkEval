@@ -5,6 +5,28 @@ acquisition:
       - url: "https://archive.org/download/bioread_dataset.tar/bioread_dataset.tar.gz"
         target: "datasets/BioRead/bioread_dataset.tar.gz"
         format: "tar.gz"
+
+parsing:
+  parser: bioread
+  jobs:
+    - split: train
+      input: datasets/BioRead/bioread_dataset/bioread/train_part_*.txt
+      output: datasets/BioRead/normalized/bioread_train.jsonl
+    - split: valid
+      input: datasets/BioRead/bioread_dataset/bioread/valid_part_*.txt
+      output: datasets/BioRead/normalized/bioread_valid.jsonl
+    - split: test
+      input: datasets/BioRead/bioread_dataset/bioread/test_part_*.txt
+      output: datasets/BioRead/normalized/bioread_test.jsonl
+    - split: train_lite
+      input: datasets/BioRead/bioread_dataset/bioread_lite/train_part_*.txt
+      output: datasets/BioRead/normalized/bioread_lite_train.jsonl
+    - split: valid_lite
+      input: datasets/BioRead/bioread_dataset/bioread_lite/valid_part_*.txt
+      output: datasets/BioRead/normalized/bioread_lite_valid.jsonl
+    - split: test_lite
+      input: datasets/BioRead/bioread_dataset/bioread_lite/test_part_*.txt
+      output: datasets/BioRead/normalized/bioread_lite_test.jsonl
     
 
 

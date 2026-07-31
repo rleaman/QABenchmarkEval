@@ -5,4 +5,11 @@ acquisition:
       - url: "https://raw.githubusercontent.com/jvladika/MedREQAL/refs/heads/main/MedREQAL.csv"
         target: "datasets/MedREQAL/MedREQAL.csv"
 
+parsing:
+  parser: medreqal
+  jobs:
+    - split: all
+      input: datasets/MedREQAL/MedREQAL.csv
+      output: datasets/MedREQAL/normalized/medreqal.jsonl
+
 

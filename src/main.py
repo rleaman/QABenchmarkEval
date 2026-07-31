@@ -7,6 +7,7 @@ import logging
 from pathlib import Path
 
 from acquisition import acquire, load_yaml
+from parsers import parse_all
 
 
 def main() -> int:
@@ -23,6 +24,7 @@ def main() -> int:
     if args.command == "update":
         try:
             acquire(args.config)
+            parse_all(args.config)
         except Exception as exc:
             logging.getLogger(__name__).error("Update failed: %s", exc)
             return 1

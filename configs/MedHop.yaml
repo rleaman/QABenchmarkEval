@@ -5,6 +5,34 @@ acquisition:
       - url: "https://zenodo.org/records/6407402/files/qangaroo_v1.1.zip?download=1"
         target: "datasets/MedHop/qangaroo_v1.1.zip"
         format: "zip"
+
+parsing:
+  parser: medhop
+  jobs:
+    - split: medhop_train
+      input: datasets/MedHop/qangaroo_v1.1/medhop/train.json
+      output: datasets/MedHop/normalized/medhop_train.jsonl
+    - split: medhop_train_masked
+      input: datasets/MedHop/qangaroo_v1.1/medhop/train.masked.json
+      output: datasets/MedHop/normalized/medhop_train_masked.jsonl
+    - split: medhop_dev
+      input: datasets/MedHop/qangaroo_v1.1/medhop/dev.json
+      output: datasets/MedHop/normalized/medhop_dev.jsonl
+    - split: medhop_dev_masked
+      input: datasets/MedHop/qangaroo_v1.1/medhop/dev.masked.json
+      output: datasets/MedHop/normalized/medhop_dev_masked.jsonl
+    - split: wikihop_train
+      input: datasets/MedHop/qangaroo_v1.1/wikihop/train.json
+      output: datasets/MedHop/normalized/wikihop_train.jsonl
+    - split: wikihop_train_masked
+      input: datasets/MedHop/qangaroo_v1.1/wikihop/train.masked.json
+      output: datasets/MedHop/normalized/wikihop_train_masked.jsonl
+    - split: wikihop_dev
+      input: datasets/MedHop/qangaroo_v1.1/wikihop/dev.json
+      output: datasets/MedHop/normalized/wikihop_dev.jsonl
+    - split: wikihop_dev_masked
+      input: datasets/MedHop/qangaroo_v1.1/wikihop/dev.masked.json
+      output: datasets/MedHop/normalized/wikihop_dev_masked.jsonl
     
 
 

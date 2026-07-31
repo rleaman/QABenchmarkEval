@@ -4,6 +4,13 @@ acquisition:
     sources:
       - url: "https://huggingface.co/datasets/knowlab-research/BioHopR/resolve/main/BioHopR.json?download=true"
         target: "datasets/BioHopR/BioHopR.json"
+
+parsing:
+  parser: biohopr
+  jobs:
+    - split: all
+      input: datasets/BioHopR/BioHopR.json
+      output: datasets/BioHopR/normalized/biohopr.jsonl
     
 
 

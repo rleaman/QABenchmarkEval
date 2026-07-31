@@ -30,6 +30,26 @@ scripts\run.ps1
 
 Each launcher accepts an optional path to a different top-level configuration file. Existing files and completed extractions are skipped. Downloaded archives are retained beside their extracted contents.
 
+After acquisition, `update` runs each dataset's configured parser. Normalized
+records are written as newline-delimited JSON (`.jsonl`), one record per line.
+Existing normalized output files are skipped. Parser jobs and their input and
+output paths are defined in each dataset configuration under `parsing`:
+
+```yaml
+parsing:
+  parser: pubmedqa
+  jobs:
+    - split: labeled
+      input: datasets/PubMedQA/ori_pqal.json
+      output: datasets/PubMedQA/normalized/ori_pqal.jsonl
+```
+
+The normalized record structure is documented in
+[`DATASET_SCHEMA.md`](DATASET_SCHEMA.md). Dataset-specific source fields are
+retained under `source_record`; large inputs such as BioRead are processed as
+streams, and its train/validation/test and lite variants are written to
+separate files.
+
 ## Run tests
 
 Use the platform-specific test launcher from the repository root:

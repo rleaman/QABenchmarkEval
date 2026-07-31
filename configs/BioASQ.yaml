@@ -5,6 +5,13 @@ acquisition:
       - url: "https://participants-area.bioasq.org/Tasks/14b/trainingDataset/"
         target: "datasets/BioASQ/BioASQ-training14b.zip"
         format: "zip"
+
+parsing:
+  parser: bioasq
+  jobs:
+    - split: train
+      input: datasets/BioASQ/BioASQ-training14b/training14b.json
+      output: datasets/BioASQ/normalized/training14b.jsonl
     
 
 

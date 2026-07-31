@@ -5,4 +5,11 @@ acquisition:
       - url: "https://raw.githubusercontent.com/deepset-ai/COVID-QA/refs/heads/master/data/question-answering/COVID-QA.json"
         target: "datasets/COVID-QA/COVID-QA.json"
 
+parsing:
+  parser: covid_qa
+  jobs:
+    - split: all
+      input: datasets/COVID-QA/COVID-QA.json
+      output: datasets/COVID-QA/normalized/covid_qa.jsonl
+
 

@@ -9,3 +9,16 @@ acquisition:
       - url: "https://drive.google.com/open?id=15v1x6aQDlZymaHGP7cZJZZYFfeJt2NdS"
         target: "datasets/PubMedQA/ori_pqaa.json"
 
+parsing:
+  parser: pubmedqa
+  jobs:
+    - split: labeled
+      input: datasets/PubMedQA/ori_pqal.json
+      output: datasets/PubMedQA/normalized/ori_pqal.jsonl
+    - split: unlabeled
+      input: datasets/PubMedQA/ori_pqau.json
+      output: datasets/PubMedQA/normalized/ori_pqau.jsonl
+    - split: additional_answers
+      input: datasets/PubMedQA/ori_pqaa.json
+      output: datasets/PubMedQA/normalized/ori_pqaa.jsonl
+
